@@ -2,13 +2,14 @@
 FROM node:16
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /app/api
 
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
 # Install dependencies
 RUN npm install
+RUN npm install -g nodemon
 
 # Copy the rest of the application code
 COPY . .
@@ -18,3 +19,4 @@ EXPOSE 5000
 
 # Define the command to run the application
 CMD ["npm", "start"]
+

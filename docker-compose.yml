@@ -10,7 +10,7 @@ services:
     networks:
       - mern-stack-network
     volumes:
-      - ./client:/app
+      - ./client:/app/client
     depends_on:
       - backend
   backend:
@@ -23,11 +23,11 @@ services:
     networks:
       - mern-stack-network
     volumes:
-      - ./api:/app
+      - ./api:/app/api
     depends_on:
       - mongo
-    environment:
-      MONGO_URI: "mongodb://mongodb:27017"
+    env_file:
+      - ./api/.env
   mongo:
     image: "mongo:latest"
     ports:
