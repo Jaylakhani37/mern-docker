@@ -28,9 +28,11 @@ Make sure you have Docker and Docker Compose installed on your machine.
 
 2. **Navigate to the project directory:**
 
-    ````bash cd your-mern-docker-repo````
+    ````
+   cd your-mern-docker-repo
+    ````
 
-3. **Build and run the Docker containers:**
+4. **Build and run the Docker containers:**
 
     ````
     docker-compose up -d
@@ -38,7 +40,7 @@ Make sure you have Docker and Docker Compose installed on your machine.
 
     This command will build the Docker images and start the containers in the background.
 
-4. **Access the application:**
+5. **Access the application:**
 
    - Frontend: [http://localhost:3000](http://localhost:3000)
    - Backend: [http://localhost:5000](http://localhost:5000)
